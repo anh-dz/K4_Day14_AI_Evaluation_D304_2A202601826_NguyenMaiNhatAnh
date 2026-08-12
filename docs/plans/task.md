@@ -4,4 +4,4 @@
 - `[x]` Task 4: Implement LLMJudge and BenchmarkRunner
 - `[x]` Task 5: Implement FailureAnalyzer
 - `[x]` Task 6: Build Golden Dataset and Run RAG
-- `[ ]` Task 7: Complete Lab Exercises and Reflection
+- `[x]` Task 7: Complete Lab Exercises and Reflection

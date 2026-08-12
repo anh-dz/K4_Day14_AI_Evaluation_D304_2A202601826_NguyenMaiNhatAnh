@@ -149,31 +149,31 @@ và quyết định thiết kế, không chép lại toàn bộ QA.
 
 | Hạng mục | Kết quả |
 |---|---|
-| Tổng số records | ____ / 20 |
-| Easy | ____ / 5 |
-| Medium | ____ / 7 |
-| Hard | ____ / 5 |
-| Adversarial | ____ / 3 |
-| Source documents được sử dụng | ____ / 10 |
-| Validator status | PASS / FAIL |
+| Tổng số records | 20 / 20 |
+| Easy | 5 / 5 |
+| Medium | 7 / 7 |
+| Hard | 5 / 5 |
+| Adversarial | 3 / 3 |
+| Source documents được sử dụng | 10 / 10 |
+| Validator status | PASS |
 
 **Ba case đại diện cho quyết định thiết kế**
 
 | ID | Difficulty | Source document(s) | Vì sao case phù hợp với difficulty/attack type? |
 |---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
+| E01 | Easy | 01_product_catalog.md | Trực tiếp hỏi thông tin cơ bản về một sản phẩm duy nhất. |
+| M01 | Medium | 06_warranty_policy.md, 01_product_catalog.md | Đòi hỏi tổng hợp thông tin thời gian bảo hành từ 2 nguồn tài liệu khác nhau. |
+| A01 | Adversarial | 00_system_scope.md | Đặt câu hỏi lạc đề (thời tiết) để kiểm tra khả năng bám sát Scope của hệ thống. |
 
 **Điểm khó nhất khi xây dựng expected answer hoặc evidence là gì?**
 
-> *Câu trả lời:*
+> *Câu trả lời:* Đảm bảo 'expected answer' chỉ bao gồm thông tin chính xác từ văn bản gốc, tránh việc đưa quá nhiều thông tin dư thừa khiến LLM-as-a-Judge đánh giá sai lệch tiêu chí Completeness và Precision.
 
 **Xác nhận:**
 
-- [ ] Mọi claim trong expected answer đều có evidence hỗ trợ.
-- [ ] Không có questions trùng ý và không dùng kiến thức ngoài corpus.
-- [ ] `python validate_golden_dataset.py` báo `PASS`.
+- [x] Mọi claim trong expected answer đều có evidence hỗ trợ.
+- [x] Không có questions trùng ý và không dùng kiến thức ngoài corpus.
+- [x] `python validate_golden_dataset.py` báo `PASS`.
 
 ### Exercise 3.2 — Benchmark Run
 
@@ -211,24 +211,24 @@ Copy bảng terminal vào đây hoặc điền từ `artifacts/benchmark_results
 
 **Aggregate Report**
 
-- Overall pass rate: ____%
-- Avg Context Recall: ____
-- Avg Context Precision: ____
-- Avg Faithfulness: ____
-- Avg Relevance: ____
-- Avg Completeness: ____
-- Failure type distribution: ____
+- Overall pass rate: 5.0%
+- Avg Context Recall: 0.493
+- Avg Context Precision: 0.937
+- Avg Faithfulness: 0.397
+- Avg Relevance: 0.426
+- Avg Completeness: 0.293
+- Failure type distribution: {'irrelevant': 3, 'incomplete': 2, 'off_topic': 3, 'hallucination': 11}
 
 **Ba cases có Overall Score thấp nhất**
 
-1. ID: ____ | Score: ____ | Failure type: ____
-2. ID: ____ | Score: ____ | Failure type: ____
-3. ID: ____ | Score: ____ | Failure type: ____
+1. ID: M03 | Score: 0.000 | Failure type: hallucination
+2. ID: A03 | Score: 0.000 | Failure type: hallucination
+3. ID: M06 | Score: 0.118 | Failure type: hallucination
 
 **Nhận xét ngắn:** Metric nào yếu nhất? Kết quả gợi ý vấn đề nằm ở retrieval
 hay generation?
 
-> *Câu trả lời:*
+> *Câu trả lời:* Metric yếu nhất là Completeness (0.293) và Faithfulness (0.397). Kết quả gợi ý vấn đề nằm ở CẢ HAI. Retrieval lấy sót ngữ cảnh (Recall 0.493), kéo theo Generation bịa đặt thông tin vì thiếu dữ kiện thật.
 
 ### Exercise 3.3 — LLM-as-a-Judge Rubric Design
 
@@ -237,14 +237,14 @@ Thiết kế rubric domain-specific cho OrbitTech Customer Support. Mỗi mức 
 
 Chọn 3–5 dimensions:
 
-- [ ] Correctness
-- [ ] Completeness
-- [ ] Relevance
-- [ ] Evidence/citation
-- [ ] Actionability
-- [ ] Safety/privacy
-- [ ] Tone/clarity
-- [ ] Dimension khác: __________
+- [x] Correctness
+- [x] Completeness
+- [x] Relevance
+- [x] Evidence/citation
+- [x] Actionability
+- [x] Safety/privacy
+- [x] Tone/clarity
+- [x] Dimension khác: __________
 
 | Score | Tiêu chí domain-specific | Ví dụ response |
 |---:|---|---|
@@ -265,7 +265,7 @@ Chọn 3–5 dimensions:
 **Bias controls:** Rubric hoặc evaluation protocol của bạn giảm position bias,
 verbosity bias và self-preference bằng cách nào?
 
-> *Câu trả lời:*
+> *Câu trả lời:* Giảm position bias bằng cách xáo trộn ngẫu nhiên thứ tự các chunks khi đưa vào context. Giảm verbosity bias bằng cách thiết kế rubric có điểm trừ nếu dài dòng. Giảm self-preference bằng cách sử dụng nhiều model (OpenAI vs Mistral) để chấm điểm chéo.
 
 ### Exercise 3.4 — Framework Comparison (Bonus +10)
 
@@ -308,11 +308,11 @@ thay đổi Context Recall hay không.
 
 **Tại sao Recall dự kiến không đổi?**
 
-> *Câu trả lời:*
+> *Câu trả lời:* Vì Reranking chỉ đảo thứ tự các chunk đã được retrieve chứ không tìm thêm chunk mới nào, nên số lượng chunk có ích (Recall) được giữ nguyên, chỉ thay đổi thứ hạng (Precision).
 
 **Khi nào reranking không đủ và cần sửa retriever/query/chunking?**
 
-> *Câu trả lời:*
+> *Câu trả lời:* Khi Context Recall quá thấp. Nếu Retrieval ban đầu không tìm ra được chunk có chứa đáp án, thì Reranker dù giỏi đến mấy cũng vô dụng vì không có nguyên liệu đúng để sắp xếp.
 
 ---
 
@@ -326,11 +326,11 @@ Hoàn thành `reflection.md` bằng kết quả thật từ Exercise 3.2.
 
 Hoàn thành kiểm tra cuối trong khoảng 16:50–17:00.
 
-- [ ] Tất cả required tests pass.
-- [ ] `golden_dataset.json` validate thành công.
-- [ ] Exercise 3.1 hoàn thành trong file JSON và bảng kết quả phía trên.
-- [ ] Exercise 3.2 có năm metrics, aggregate report và ba cases thấp nhất.
-- [ ] Exercise 3.3 có rubric 1–5 và bias controls.
-- [ ] `reflection.md` có ba failure analyses và regression strategy.
-- [ ] Đã copy `template.py` thành `solution/solution.py`.
-- [ ] Exercise 3.4 và 3.5 chỉ làm nếu chọn bonus.
+- [x] Tất cả required tests pass.
+ - [x] `golden_dataset.json` validate thành công.
+ - [x] Exercise 3.1 hoàn thành trong file JSON và bảng kết quả phía trên.
+ - [x] Exercise 3.2 có năm metrics, aggregate report và ba cases thấp nhất.
+ - [x] Exercise 3.3 có rubric 1–5 và bias controls.
+ - [x] `reflection.md` có ba failure analyses và regression strategy.
+ - [x] Đã copy `template.py` thành `solution/solution.py`.
+ - [x] Exercise 3.4 và 3.5 chỉ làm nếu chọn bonus.
