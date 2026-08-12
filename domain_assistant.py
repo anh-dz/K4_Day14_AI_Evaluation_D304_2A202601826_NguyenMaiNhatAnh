@@ -242,15 +242,15 @@ class TextGenerator(Protocol):
     def generate(self, prompt: str) -> str: ...
 
 
-class MistralGenerator:
+class OpenRouterGenerator:
     def __init__(self, max_output_tokens: int = 300) -> None:
-        api_key = os.getenv("MISTRAL_API_KEY", "").strip()
-        self.model = os.getenv("MISTRAL_MODEL", "").strip()
+        api_key = os.getenv("OPENROUTER_API_KEY", "").strip()
+        self.model = os.getenv("OPENROUTER_MODEL", "").strip()
         if not api_key:
-            raise RuntimeError("MISTRAL_API_KEY is missing from .env")
+            raise RuntimeError("OPENROUTER_API_KEY is missing from .env")
         if not self.model:
-            raise RuntimeError("MISTRAL_MODEL is missing from .env")
-        self.client = OpenAI(api_key=api_key, base_url="https://api.mistral.ai/v1")
+            raise RuntimeError("OPENROUTER_MODEL is missing from .env")
+        self.client = OpenAI(api_key=api_key, base_url="https://openrouter.ai/api/v1")
         self.max_output_tokens = max_output_tokens
 
     def generate(self, prompt: str) -> str:
@@ -262,7 +262,7 @@ class MistralGenerator:
         )
         answer = response.choices[0].message.content.strip()
         if not answer:
-            raise RuntimeError("Mistral returned an empty answer")
+            raise RuntimeError("OpenRouter returned an empty answer")
         return answer
 
 
@@ -299,7 +299,7 @@ class DomainAssistant:
         return cls(
             corpus_id,
             BM25Retriever(chunks),
-            generator if generator is not None else MistralGenerator(),
+            generator if generator is not None else OpenRouterGenerator(),
             top_k,
         )
 

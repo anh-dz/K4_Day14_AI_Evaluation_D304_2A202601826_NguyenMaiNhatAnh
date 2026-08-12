@@ -211,24 +211,24 @@ Copy bảng terminal vào đây hoặc điền từ `artifacts/benchmark_results
 
 **Aggregate Report**
 
-- Overall pass rate: 5.0%
+- Overall pass rate: 10.0%
 - Avg Context Recall: 0.493
 - Avg Context Precision: 0.937
-- Avg Faithfulness: 0.397
-- Avg Relevance: 0.426
-- Avg Completeness: 0.293
-- Failure type distribution: {'irrelevant': 3, 'incomplete': 2, 'off_topic': 3, 'hallucination': 11}
+- Avg Faithfulness: 0.342
+- Avg Relevance: 0.622
+- Avg Completeness: 0.344
+- Failure type distribution: {'off_topic': 5, 'hallucination': 13}{'irrelevant': 3, 'incomplete': 2, 'off_topic': 3, 'hallucination': 11}
 
 **Ba cases có Overall Score thấp nhất**
 
-1. ID: M03 | Score: 0.000 | Failure type: hallucination
-2. ID: A03 | Score: 0.000 | Failure type: hallucination
-3. ID: M06 | Score: 0.118 | Failure type: hallucination
+1. ID: A02 | Score: 0.204 | Failure type: hallucination
+2. ID: M06 | Score: 0.234 | Failure type: hallucination
+3. ID: E04 | Score: 0.256 | Failure type: hallucination
 
 **Nhận xét ngắn:** Metric nào yếu nhất? Kết quả gợi ý vấn đề nằm ở retrieval
 hay generation?
 
-> *Câu trả lời:* Metric yếu nhất là Completeness (0.293) và Faithfulness (0.397). Kết quả gợi ý vấn đề nằm ở CẢ HAI. Retrieval lấy sót ngữ cảnh (Recall 0.493), kéo theo Generation bịa đặt thông tin vì thiếu dữ kiện thật.
+> *Câu trả lời:* Faithfulness yếu nhất (0.342). Nhưng nguyên nhân gốc rễ là Retrieval (Recall 0.493). BM25 không tìm được context, dẫn đến GPT-4o-mini bịa đặt thông tin.
 
 ### Exercise 3.3 — LLM-as-a-Judge Rubric Design
 
