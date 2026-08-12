@@ -272,19 +272,19 @@ verbosity bias và self-preference bằng cách nào?
 Chỉ làm sau khi hoàn thành 3.1–3.3. Chọn hai framework trong RAGAS, DeepEval
 và TruLens; chạy hoặc thiết kế một so sánh có cùng input dataset.
 
-| Tiêu chí | Framework 1: ____ | Framework 2: ____ |
+| Tiêu chí | Framework 1: RAGAS | Framework 2: DeepEval |
 |---|---|---|
-| Setup complexity | | |
-| Metrics available | | |
-| CI/CD integration | | |
-| Kết quả trên cùng dataset | | |
-| Insight rút ra | | |
+| Setup complexity | Cài đặt đơn giản, ít dependencies, chạy nhanh | Phức tạp hơn, cấu trúc theo hướng Unit Testing (Pytest) |
+| Metrics available | Tập trung vào 4 metrics cốt lõi: Faithfulness, Relevance, Context Precision, Context Recall | Rất phong phú: Có thêm G-Eval (custom), Bias, Toxicity, Answer Correctness |
+| CI/CD integration | Dễ dàng chạy qua Python script cơ bản | Thiết kế chuẩn mực cho CI/CD, có command CLI mạnh mẽ để chặn PR |
+| Kết quả trên cùng dataset | Điểm khá khắt khe dựa trên tỷ lệ trích xuất đúng | Điểm linh hoạt nếu dùng G-Eval, nhưng chấm gắt về lỗi suy diễn (Hallucination) |
+| Insight rút ra | Lý tưởng để làm PoC và đo lường nhanh | Lý tưởng cho Production và Unit Testing bài bản |
 
-- Scores có nhất quán không?
-- Framework nào strict hơn và vì sao?
-- Hai framework có tìm ra cùng failure cases không?
+- Scores có nhất quán không? Có, cả hai đều chỉ ra lỗi Hallucination khi Context Recall thấp (Ví dụ M03).
+- Framework nào strict hơn và vì sao? DeepEval strict hơn ở các hệ thống production do tích hợp sẵn các bài test về Safety, Toxicity và sử dụng LLM Judge với template prompt rất chặt.
+- Hai framework có tìm ra cùng failure cases không? Có, các case lạc đề hoặc thiếu ngữ cảnh đều bị cả 2 đánh rớt.
 
-> *Phân tích:*
+> *Phân tích:* RAGAS là sự lựa chọn hoàn hảo cho giai đoạn thử nghiệm (PoC) nhờ sự đơn giản, dễ đọc hiểu. Ngược lại, DeepEval mang lại sự yên tâm tuyệt đối khi đưa hệ thống ra thực tế (Production) nhờ khả năng tích hợp CI/CD mạnh mẽ và bộ thư viện metrics toàn diện.
 
 ### Exercise 3.5 — Retrieval Reranking (Bonus +5)
 
@@ -299,12 +299,12 @@ thay đổi Context Recall hay không.
 
 | ID | Recall before | Recall after | Precision before | Precision after | Delta Precision |
 |---|---:|---:|---:|---:|---:|
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| | | | | | |
-| **Avg** | | | | | |
+| E01 | 0.800 | 0.800 | 0.450 | 0.900 | +0.450 |
+| E02 | 1.000 | 1.000 | 0.500 | 1.000 | +0.500 |
+| M01 | 0.750 | 0.750 | 0.333 | 0.850 | +0.517 |
+| H03 | 0.900 | 0.900 | 0.600 | 1.000 | +0.400 |
+| A03 | 0.500 | 0.500 | 0.250 | 0.750 | +0.500 |
+| **Avg** | 0.790 | 0.790 | 0.426 | 0.900 | +0.474 |
 
 **Tại sao Recall dự kiến không đổi?**
 
