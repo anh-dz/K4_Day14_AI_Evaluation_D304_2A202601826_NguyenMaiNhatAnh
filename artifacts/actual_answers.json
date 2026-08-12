@@ -1,0 +1,293 @@
+{
+  "schema_version": "1.0",
+  "corpus_id": "orbittech-customer-support-v1",
+  "generated_at": "2026-08-12T08:39:48.762946+00:00",
+  "agent": {
+    "name": "domain-assistant",
+    "model": "mistral-medium-latest",
+    "top_k": 5,
+    "prompt_version": "1.0"
+  },
+  "answers": [
+    {
+      "id": "E01",
+      "question": "Dummy question for E01?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "E02",
+      "question": "Dummy question for E02?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "E03",
+      "question": "Dummy question for E03?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "E04",
+      "question": "Dummy question for E04?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "E05",
+      "question": "Dummy question for E05?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "M01",
+      "question": "Dummy question for M01?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "M02",
+      "question": "Dummy question for M02?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "M03",
+      "question": "Dummy question for M03?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "M04",
+      "question": "Dummy question for M04?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "M05",
+      "question": "Dummy question for M05?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "M06",
+      "question": "Dummy question for M06?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "M07",
+      "question": "Dummy question for M07?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "H01",
+      "question": "Dummy question for H01?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "H02",
+      "question": "Dummy question for H02?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "H03",
+      "question": "Dummy question for H03?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "H04",
+      "question": "Dummy question for H04?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "H05",
+      "question": "Dummy question for H05?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "A01",
+      "question": "Dummy question for A01?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "A02",
+      "question": "Dummy question for A02?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "A03",
+      "question": "Dummy question for A03?",
+      "actual_answer": "Insufficient evidence.",
+      "retrieved_contexts": [
+        {
+          "source_doc": "09_escalation_and_policy_updates.md",
+          "chunk_id": "OT-09-P01",
+          "text": "Routine questions begin with Customer Support. A case may move to a specialist when it involves a failed carrier trace, repeated repair, warranty-coverage dispute, account-security incident, privacy concern, or payment investigation. The customer should retain the case number; opening duplicate cases can delay assignment and does not change priority.",
+          "score": 3.736817
+        }
+      ],
+      "error": null
+    }
+  ]
+}
