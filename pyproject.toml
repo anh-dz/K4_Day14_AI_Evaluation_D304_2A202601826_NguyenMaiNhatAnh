@@ -1,0 +1,21 @@
+[project]
+name = "k4-day14-ai-evaluation-d304-2a202601826-nguyenmainhatanh"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "anh-dz", email = "nmnanh1235@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=1.66.0,<3.0.0",
+    "pytest>=8.0.0,<10.0.0",
+    "python-dotenv>=1.0.0,<2.0.0",
+]
+
+[project.scripts]
+k4-day14-ai-evaluation-d304-2a202601826-nguyenmainhatanh = "k4_day14_ai_evaluation_d304_2a202601826_nguyenmainhatanh:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
