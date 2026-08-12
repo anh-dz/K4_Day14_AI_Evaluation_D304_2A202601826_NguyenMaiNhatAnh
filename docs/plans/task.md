@@ -1,0 +1,7 @@
+- `[x]` Task 1: Complete Warm-up Exercises
+- `[x]` Task 2: Implement Data Models
+- `[x]` Task 3: Implement RAGASEvaluator
+- `[x]` Task 4: Implement LLMJudge and BenchmarkRunner
+- `[x]` Task 5: Implement FailureAnalyzer
+- `[ ]` Task 6: Build Golden Dataset and Run RAG
+- `[ ]` Task 7: Complete Lab Exercises and Reflection
